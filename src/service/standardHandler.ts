@@ -56,6 +56,10 @@ export default class StandardHandler {
   }
 
   public async handle() {
+    const allowedTypes = this.work.config.changeTypesToHandle ?? ['A', 'D', 'M']
+    if (!allowedTypes.includes(this.changeType)) {
+      return
+    }
     if (this._isProcessable()) {
       try {
         switch (this.changeType) {

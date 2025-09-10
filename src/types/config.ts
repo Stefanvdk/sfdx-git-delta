@@ -11,4 +11,5 @@ export type Config = {
   generateDelta: boolean
   include?: string | undefined
   includeDestructive?: string | undefined
+  changeTypesToHandle?: string[]
 }
