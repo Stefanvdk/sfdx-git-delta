@@ -114,7 +114,7 @@
     "lint:fix": "wireit",
     "postpack": "shx rm -f oclif.manifest.json",
     "prepack": "wireit",
-    "prepare": "husky",
+    "prepare": "npm run build",
     "prepublishOnly": "npm shrinkwrap",
     "test:build": "wireit",
     "test:mutation": "wireit",
